@@ -1,0 +1,195 @@
+"use client";
+
+import React, { useState } from "react";
+import { Check, X, Star } from "lucide-react";
+import { PRICING_TIERS } from "@/data/siteData";
+
+const YEARLY_PRICES: Record<string, { BDT: string; USD: string }> = {
+  starter: { BDT: "2,000", USD: "40" },
+  professional: { BDT: "6,000", USD: "119" },
+};
+
+export function Pricing() {
+  const [currency, setCurrency] = useState<"BDT" | "USD">("BDT");
+  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly");
+
+  return (
+    <section id="pricing" className="bg-[#f8fbff] py-20 lg:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="font-display text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-[2.6rem] lg:leading-tight">
+            Transparent Pricing <span className="text-brand-gradient">That</span>
+            <span className="text-brand-gradient block">Scales With You</span>
+          </h2>
+          <p className="mt-4 text-base text-slate-600">
+            Predictable monthly plans with zero hidden charges. Free staff onboarding and guided
+            data migration included.
+          </p>
+
+          {/* Billing Cycle + Currency Controls */}
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+            <div className="inline-flex items-center rounded-full border border-slate-200 bg-white p-1 shadow-2xs">
+              <button
+                type="button"
+                onClick={() => setBillingCycle("monthly")}
+                className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-all cursor-pointer ${
+                  billingCycle === "monthly"
+                    ? "bg-[#1a56db] text-white shadow-xs"
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                Monthly
+              </button>
+              <button
+                type="button"
+                onClick={() => setBillingCycle("yearly")}
+                className={`inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-semibold transition-all cursor-pointer ${
+                  billingCycle === "yearly"
+                    ? "bg-[#1a56db] text-white shadow-xs"
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                Yearly
+                <span
+                  className={`rounded-full px-1.5 py-0.5 text-[10px] font-bold ${
+                    billingCycle === "yearly"
+                      ? "bg-white/20 text-white"
+                      : "bg-teal-50 text-[#0f5156]"
+                  }`}
+                >
+                  Save 20%
+                </span>
+              </button>
+            </div>
+
+            <div className="inline-flex items-center rounded-full border border-slate-200 bg-white p-1 shadow-2xs">
+              <button
+                type="button"
+                onClick={() => setCurrency("BDT")}
+                className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-all cursor-pointer ${
+                  currency === "BDT"
+                    ? "bg-[#0f347a] text-white shadow-xs"
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                Bangladesh (BDT)
+              </button>
+              <button
+                type="button"
+                onClick={() => setCurrency("USD")}
+                className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-all cursor-pointer ${
+                  currency === "USD"
+                    ? "bg-[#0f347a] text-white shadow-xs"
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                International (USD)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-14 grid grid-cols-1 gap-7 lg:grid-cols-3 lg:items-stretch">
+          {PRICING_TIERS.map((tier) => {
+            const isCustom = tier.priceBDT === "Contact Us";
+            const monthlyAmount =
+              currency === "BDT"
+                ? tier.priceBDT.replace("৳ ", "")
+                : tier.priceUSD.replace("$", "");
+            const numericAmount =
+              !isCustom && billingCycle === "yearly" && YEARLY_PRICES[tier.id]
+                ? YEARLY_PRICES[tier.id][currency]
+                : monthlyAmount;
+            const prefix = currency === "BDT" ? "BDT" : "USD $";
+
+            return (
+              <div
+                key={tier.id}
+                className={`relative flex flex-col rounded-3xl bg-white p-8 transition-all ${
+                  tier.featured
+                    ? "border-2 border-[#1a56db] shadow-2xl shadow-[#1a56db]/14 lg:-translate-y-3"
+                    : "border border-slate-200/85 shadow-sm hover:shadow-md"
+                }`}
+              >
+                {tier.featured && (
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#1546a0] to-[#0d9488] px-4 py-1.5 text-xs font-bold text-white shadow-md shadow-[#1546a0]/30">
+                      <Star className="h-3.5 w-3.5 fill-white text-white" />
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <div>
+                  <p
+                    className={`text-xs font-bold uppercase tracking-widest ${
+                      tier.featured ? "text-[#1a56db]" : "text-[#0f347a]"
+                    }`}
+                  >
+                    {tier.name}
+                  </p>
+
+                  <div className="mt-4 flex items-baseline gap-1.5">
+                    {isCustom ? (
+                      <span className="font-display text-3xl font-extrabold text-[#1546a0]">
+                        Contact Us
+                      </span>
+                    ) : (
+                      <>
+                        <span className="text-sm font-semibold text-slate-600">{prefix}</span>
+                        <span className="font-display text-4xl font-extrabold tracking-tight text-slate-950">
+                          {numericAmount}
+                        </span>
+                        <span className="text-xs font-medium text-slate-600">{tier.period}</span>
+                      </>
+                    )}
+                  </div>
+
+                  <p className="mt-2 text-xs font-medium text-slate-600">
+                    {tier.tagline}
+                    {!isCustom && billingCycle === "yearly" ? " · Billed annually" : ""}
+                  </p>
+                </div>
+
+                <ul className="mt-6 flex-1 space-y-3.5 border-t border-slate-100 pt-6">
+                  {tier.features.map((feat) => (
+                    <li
+                      key={feat.label}
+                      className={`flex items-center gap-2.5 text-sm ${
+                        feat.included ? "text-slate-800 font-medium" : "text-slate-500"
+                      }`}
+                    >
+                      {feat.included ? (
+                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#0d9488] text-white">
+                          <Check className="h-3 w-3 stroke-[3]" />
+                        </span>
+                      ) : (
+                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-slate-200 text-slate-600">
+                          <X className="h-3 w-3 stroke-[2.5]" />
+                        </span>
+                      )}
+                      <span>{feat.label}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-8">
+                  <a
+                    href="#contact"
+                    className={`block w-full rounded-xl px-5 py-3.5 text-center text-sm font-semibold transition-all ${
+                      tier.featured
+                        ? "bg-[#1a56db] text-white shadow-md shadow-[#1a56db]/25 hover:bg-[#1546a0]"
+                        : "border border-slate-300 bg-white text-[#1546a0] hover:border-[#1546a0] hover:bg-slate-50"
+                    }`}
+                  >
+                    {tier.ctaLabel}
+                  </a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
