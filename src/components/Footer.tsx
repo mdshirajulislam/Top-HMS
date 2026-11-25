@@ -52,10 +52,12 @@ export function Footer() {
                 centers, and multi-specialty hospitals.
               </p>
 
-              {/* Social Circle Links matching reference */}
+              {/* Social Circle Links */}
               <div className="mt-5 flex items-center justify-center gap-2.5 lg:justify-start">
                 <a
-                  href="#contact"
+                  href="https://www.facebook.com/optevecom"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Facebook"
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 bg-slate-50 text-slate-700 transition-colors hover:border-[#1a56db] hover:bg-blue-50 hover:text-[#1a56db]"
                 >
@@ -64,7 +66,9 @@ export function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="#contact"
+                  href="https://www.linkedin.com/company/opteve"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="LinkedIn"
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 bg-slate-50 text-slate-700 transition-colors hover:border-[#1a56db] hover:bg-blue-50 hover:text-[#1a56db]"
                 >
@@ -73,7 +77,9 @@ export function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="#contact"
+                  href="https://x.com/sajedul_ce"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="X"
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 bg-slate-50 text-slate-700 transition-colors hover:border-[#1a56db] hover:bg-blue-50 hover:text-[#1a56db]"
                 >
@@ -82,7 +88,9 @@ export function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="#contact"
+                  href="https://www.youtube.com/@opteve"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="YouTube"
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 bg-slate-50 text-slate-700 transition-colors hover:border-[#1a56db] hover:bg-blue-50 hover:text-[#1a56db]"
                 >
