@@ -42,8 +42,8 @@ export function Footer() {
       <footer className="border-t border-slate-200 bg-white text-slate-800">
         <div className="mx-auto max-w-7xl px-4 py-12 sm:py-16 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-x-6 gap-y-8 lg:grid-cols-12 lg:gap-10">
-            {/* Col 1: Brand + Social Icons */}
-            <div className="col-span-2 lg:col-span-4">
+            {/* Col 1: Brand + Social Icons (Centered on mobile, left-aligned on desktop) */}
+            <div className="col-span-2 flex flex-col items-center text-center lg:col-span-4 lg:items-start lg:text-left">
               <a href="#hero" aria-label="Top HMS Home">
                 <BrandLogo variant="light" />
               </a>
@@ -53,7 +53,7 @@ export function Footer() {
               </p>
 
               {/* Social Circle Links matching reference */}
-              <div className="mt-5 flex items-center gap-2.5">
+              <div className="mt-5 flex items-center justify-center gap-2.5 lg:justify-start">
                 <a
                   href="#contact"
                   aria-label="Facebook"
