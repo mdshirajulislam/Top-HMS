@@ -23,9 +23,9 @@ const CARD_META: Record<
   },
   "cloud-multi": {
     tag: "Multi-Branch",
-    iconBg: "bg-blue-50 text-[#1546a0] ring-1 ring-blue-200/80",
-    iconHover: "group-hover:bg-[#1546a0] group-hover:text-white group-hover:ring-[#1546a0]",
-    tagStyle: "bg-blue-50 text-[#0f347a] border-blue-200",
+    iconBg: "bg-blue-50 text-[#192150] ring-1 ring-blue-200/80",
+    iconHover: "group-hover:bg-[#192150] group-hover:text-white group-hover:ring-[#192150]",
+    tagStyle: "bg-blue-50 text-[#192150] border-blue-200",
   },
   "zero-leakage": {
     tag: "256-Bit SSL",
@@ -58,7 +58,7 @@ export function Features() {
     <section id="features" className="bg-white py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="inline-block rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-xs font-bold uppercase tracking-wider text-[#0f347a]">
+          <span className="inline-block rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-xs font-bold uppercase tracking-wider text-[#192150]">
             Core Capabilities
           </span>
           <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
@@ -76,10 +76,10 @@ export function Features() {
             return (
               <div
                 key={feature.id}
-                className="group relative overflow-hidden rounded-2xl border border-slate-200/85 bg-gradient-to-b from-white to-slate-50/50 p-7 shadow-sm shadow-slate-900/4 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#1546a0]/30 hover:shadow-xl hover:shadow-[#1546a0]/8"
+                className="group relative overflow-hidden rounded-2xl border border-slate-200/85 bg-gradient-to-b from-white to-slate-50/50 p-7 shadow-sm shadow-slate-900/4 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#192150]/30 hover:shadow-xl hover:shadow-[#192150]/8"
               >
                 {/* Top gradient accent reveal on hover */}
-                <span className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#1546a0] via-[#0d9488] to-[#14b8a6] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <span className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#192150] via-[#0d9488] to-[#14b8a6] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
                 {/* Top row: Icon + Subtle Capability Pill */}
                 <div className="flex items-center justify-between gap-3">
@@ -95,7 +95,7 @@ export function Features() {
                   </span>
                 </div>
 
-                <h3 className="mt-6 font-display text-lg font-bold text-slate-900 transition-colors group-hover:text-[#1546a0]">
+                <h3 className="mt-6 font-display text-lg font-bold text-slate-900 transition-colors group-hover:text-[#192150]">
                   {feature.title}
                 </h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-slate-600">

@@ -34,7 +34,7 @@ export function Pricing() {
                 onClick={() => setBillingCycle("monthly")}
                 className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-all cursor-pointer ${
                   billingCycle === "monthly"
-                    ? "bg-[#1a56db] text-white shadow-xs"
+                    ? "bg-[#203272] text-white shadow-xs"
                     : "text-slate-600 hover:text-slate-900"
                 }`}
               >
@@ -45,7 +45,7 @@ export function Pricing() {
                 onClick={() => setBillingCycle("yearly")}
                 className={`inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-semibold transition-all cursor-pointer ${
                   billingCycle === "yearly"
-                    ? "bg-[#1a56db] text-white shadow-xs"
+                    ? "bg-[#203272] text-white shadow-xs"
                     : "text-slate-600 hover:text-slate-900"
                 }`}
               >
@@ -68,7 +68,7 @@ export function Pricing() {
                 onClick={() => setCurrency("BDT")}
                 className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-all cursor-pointer ${
                   currency === "BDT"
-                    ? "bg-[#0f347a] text-white shadow-xs"
+                    ? "bg-[#192150] text-white shadow-xs"
                     : "text-slate-600 hover:text-slate-900"
                 }`}
               >
@@ -79,7 +79,7 @@ export function Pricing() {
                 onClick={() => setCurrency("USD")}
                 className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-all cursor-pointer ${
                   currency === "USD"
-                    ? "bg-[#0f347a] text-white shadow-xs"
+                    ? "bg-[#192150] text-white shadow-xs"
                     : "text-slate-600 hover:text-slate-900"
                 }`}
               >
@@ -107,13 +107,13 @@ export function Pricing() {
                 key={tier.id}
                 className={`relative flex flex-col rounded-3xl bg-white p-8 transition-all ${
                   tier.featured
-                    ? "border-2 border-[#1a56db] shadow-2xl shadow-[#1a56db]/14 lg:-translate-y-3"
+                    ? "border-2 border-[#203272] shadow-2xl shadow-[#203272]/14 lg:-translate-y-3"
                     : "border border-slate-200/85 shadow-sm hover:shadow-md"
                 }`}
               >
                 {tier.featured && (
                   <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#1546a0] to-[#0d9488] px-4 py-1.5 text-xs font-bold text-white shadow-md shadow-[#1546a0]/30">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#192150] to-[#0d9488] px-4 py-1.5 text-xs font-bold text-white shadow-md shadow-[#192150]/30">
                       <Star className="h-3.5 w-3.5 fill-white text-white" />
                       Most Popular
                     </span>
@@ -123,7 +123,7 @@ export function Pricing() {
                 <div>
                   <p
                     className={`text-xs font-bold uppercase tracking-widest ${
-                      tier.featured ? "text-[#1a56db]" : "text-[#0f347a]"
+                      tier.featured ? "text-[#203272]" : "text-[#192150]"
                     }`}
                   >
                     {tier.name}
@@ -131,7 +131,7 @@ export function Pricing() {
 
                   <div className="mt-4 flex items-baseline gap-1.5">
                     {isCustom ? (
-                      <span className="font-display text-3xl font-extrabold text-[#1546a0]">
+                      <span className="font-display text-3xl font-extrabold text-[#192150]">
                         Contact Us
                       </span>
                     ) : (
@@ -178,8 +178,8 @@ export function Pricing() {
                     href="#contact"
                     className={`block w-full rounded-xl px-5 py-3.5 text-center text-sm font-semibold transition-all ${
                       tier.featured
-                        ? "bg-[#1a56db] text-white shadow-md shadow-[#1a56db]/25 hover:bg-[#1546a0]"
-                        : "border border-slate-300 bg-white text-[#1546a0] hover:border-[#1546a0] hover:bg-slate-50"
+                        ? "bg-[#203272] text-white shadow-md shadow-[#203272]/25 hover:bg-[#192150]"
+                        : "border border-slate-300 bg-white text-[#192150] hover:border-[#192150] hover:bg-slate-50"
                     }`}
                   >
                     {tier.ctaLabel}

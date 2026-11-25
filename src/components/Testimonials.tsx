@@ -37,7 +37,7 @@ export function Testimonials() {
 
         <div className="relative mt-12 rounded-3xl border border-slate-200/90 bg-white p-8 shadow-lg shadow-slate-900/5 sm:p-12">
           <div className="flex justify-center">
-            <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0f3b7c]/8 text-[#0f3b7c]">
+            <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#203272]/8 text-[#203272]">
               <Quote className="h-6 w-6" />
             </span>
           </div>
@@ -50,7 +50,7 @@ export function Testimonials() {
             <span className="rounded-full border border-[#0d9488]/30 bg-teal-50 px-4 py-1 text-xs font-bold text-[#0f5156]">
               {current.impact}
             </span>
-            <p className="mt-3 font-display text-base font-bold text-[#0f3b7c]">{current.role}</p>
+            <p className="mt-3 font-display text-base font-bold text-[#203272]">{current.role}</p>
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               {current.departments}
             </p>
@@ -62,7 +62,7 @@ export function Testimonials() {
               type="button"
               onClick={handlePrev}
               aria-label="Previous role"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition-colors hover:border-[#0f3b7c] hover:text-[#0f3b7c] cursor-pointer"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition-colors hover:border-[#203272] hover:text-[#203272] cursor-pointer"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -75,7 +75,7 @@ export function Testimonials() {
                   onClick={() => setIndex(idx)}
                   aria-label={`View slide ${idx + 1}`}
                   className={`h-2.5 rounded-full transition-all cursor-pointer ${
-                    idx === index ? "w-8 bg-[#0f3b7c]" : "w-2.5 bg-slate-300 hover:bg-slate-400"
+                    idx === index ? "w-8 bg-[#203272]" : "w-2.5 bg-slate-300 hover:bg-slate-400"
                   }`}
                 />
               ))}
@@ -85,7 +85,7 @@ export function Testimonials() {
               type="button"
               onClick={handleNext}
               aria-label="Next role"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition-colors hover:border-[#0f3b7c] hover:text-[#0f3b7c] cursor-pointer"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition-colors hover:border-[#203272] hover:text-[#203272] cursor-pointer"
             >
               <ChevronRight className="h-5 w-5" />
             </button>

@@ -5,12 +5,12 @@ interface BrandLogoProps {
 }
 
 export function BrandLogo({ variant = "light" }: BrandLogoProps) {
-  const textColor = variant === "dark" ? "text-white" : "text-[#0f3b7c]";
+  const textColor = variant === "dark" ? "text-white" : "text-[#203272]";
   const subColor = variant === "dark" ? "text-teal-300" : "text-[#0d9488]";
 
   return (
     <span className="inline-flex items-center gap-2.5 select-none">
-      <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#0f3b7c] to-[#0d9488] shadow-sm shadow-[#0f3b7c]/20">
+      <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#203272] to-[#0d9488] shadow-sm shadow-[#203272]/20">
         <svg
           width="22"
           height="22"

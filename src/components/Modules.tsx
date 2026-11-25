@@ -24,7 +24,7 @@ const TAB_ICONS: Record<string, React.ReactNode> = {
 
 const TONE_BADGE = {
   emerald: "bg-emerald-50 text-emerald-800 border-emerald-200",
-  blue: "bg-blue-50 text-[#1546a0] border-blue-200",
+  blue: "bg-blue-50 text-[#192150] border-blue-200",
   amber: "bg-amber-50 text-amber-800 border-amber-200",
 };
 
@@ -62,8 +62,8 @@ export function Modules() {
                 onClick={() => setActiveId(mod.id)}
                 className={`inline-flex items-center justify-center gap-1.5 sm:gap-2 rounded-full px-3 py-2.5 sm:px-5 text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                   isActive
-                    ? "bg-[#1a56db] text-white shadow-lg shadow-[#1a56db]/30"
-                    : "border border-slate-200/90 bg-white text-slate-700 shadow-2xs hover:border-[#1a56db]/40 hover:text-[#1a56db]"
+                    ? "bg-[#203272] text-white shadow-lg shadow-[#203272]/30"
+                    : "border border-slate-200/90 bg-white text-slate-700 shadow-2xs hover:border-[#203272]/40 hover:text-[#203272]"
                 }`}
               >
                 {TAB_ICONS[mod.id]}
@@ -78,9 +78,9 @@ export function Modules() {
           <div className="grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-12">
             {/* Left High-Contrast Light Workspace Preview */}
             <div className="lg:col-span-6">
-              <div className="overflow-hidden rounded-2xl border border-slate-200/90 bg-[#f4f8fd] shadow-lg shadow-[#1546a0]/8">
+              <div className="overflow-hidden rounded-2xl border border-slate-200/90 bg-[#f4f8fd] shadow-lg shadow-[#192150]/8">
                 {/* Brand Gradient Window Header */}
-                <div className="flex flex-wrap items-center justify-between gap-2 bg-gradient-to-r from-[#1546a0] to-[#0d9488] px-3.5 py-2.5 sm:px-4 sm:py-3 text-white">
+                <div className="flex flex-wrap items-center justify-between gap-2 bg-gradient-to-r from-[#192150] to-[#0d9488] px-3.5 py-2.5 sm:px-4 sm:py-3 text-white">
                   <div className="flex items-center gap-1.5 min-w-0">
                     <span className="hidden sm:inline-block h-2.5 w-2.5 rounded-full bg-white/50" />
                     <span className="hidden sm:inline-block h-2.5 w-2.5 rounded-full bg-white/50" />
@@ -89,7 +89,7 @@ export function Modules() {
                       Top HMS · {activeModule.tabLabel}
                     </span>
                   </div>
-                  <span className="inline-flex shrink-0 whitespace-nowrap items-center gap-1 rounded-full bg-white px-2.5 py-1 text-[10px] sm:text-[11px] font-bold text-[#1546a0] shadow-xs">
+                  <span className="inline-flex shrink-0 whitespace-nowrap items-center gap-1 rounded-full bg-white px-2.5 py-1 text-[10px] sm:text-[11px] font-bold text-[#192150] shadow-xs">
                     <Sparkles className="h-3 w-3 text-[#e85227]" />
                     {activeModule.badge}
                   </span>
@@ -102,7 +102,7 @@ export function Modules() {
                       <p className="text-[11px] sm:text-xs font-semibold text-slate-500">
                         {activeModule.metricLabel}
                       </p>
-                      <p className="mt-1 whitespace-nowrap font-display text-xl sm:text-2xl font-extrabold text-[#1546a0]">
+                      <p className="mt-1 whitespace-nowrap font-display text-xl sm:text-2xl font-extrabold text-[#192150]">
                         {activeModule.metricValue}
                       </p>
                     </div>

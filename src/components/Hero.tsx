@@ -21,7 +21,7 @@ export function Hero() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
           {/* Left Column */}
           <div className="lg:col-span-6">
-            <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full border border-slate-200/80 bg-white px-3 py-1.5 sm:px-4 sm:py-2 text-[11px] sm:text-xs font-semibold text-[#1546a0] shadow-sm">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full border border-slate-200/80 bg-white px-3 py-1.5 sm:px-4 sm:py-2 text-[11px] sm:text-xs font-semibold text-[#192150] shadow-sm">
               <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-500" />
               <Star className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0 fill-emerald-500 text-emerald-500" />
               <span className="whitespace-nowrap">Next-Gen Healthcare ERP · Cloud &amp; Offline</span>
@@ -40,7 +40,7 @@ export function Hero() {
             <div className="mt-7 sm:mt-8 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-4">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#1a56db] px-4 py-3 sm:px-7 sm:py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#1a56db]/25 transition-all hover:-translate-y-0.5 hover:bg-[#1546a0]"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#203272] px-4 py-3 sm:px-7 sm:py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#203272]/25 transition-all hover:-translate-y-0.5 hover:bg-[#192150]"
               >
                 <Rocket className="h-4 w-4 shrink-0" />
                 <span className="whitespace-nowrap">Book Free Trial</span>
@@ -71,7 +71,7 @@ export function Hero() {
           <div className="relative lg:col-span-6 py-6">
             <div className="relative mx-auto max-w-xl lg:max-w-none">
               {/* Teal-Bordered Browser Frame matching reference */}
-              <div className="overflow-hidden rounded-3xl border-2 border-[#0d9488]/65 bg-white shadow-2xl shadow-[#1546a0]/12">
+              <div className="overflow-hidden rounded-3xl border-2 border-[#0d9488]/65 bg-white shadow-2xl shadow-[#192150]/12">
                 {/* Browser Header */}
                 <div className="flex items-center justify-between border-b border-slate-100 bg-slate-50/90 px-5 py-3">
                   <div className="flex items-center gap-2">
@@ -106,7 +106,7 @@ export function Hero() {
                         key={item.label}
                         className={`rounded-lg px-2.5 py-1.5 font-medium ${
                           item.active
-                            ? "bg-blue-50 text-[#1546a0] font-semibold"
+                            ? "bg-blue-50 text-[#192150] font-semibold"
                             : "text-slate-500"
                         }`}
                       >
@@ -118,7 +118,7 @@ export function Hero() {
                   {/* Main Light Workspace */}
                   <div className="col-span-12 sm:col-span-9 p-4 space-y-3">
                     {/* Blue Welcome Banner */}
-                    <div className="flex items-center justify-between gap-2 rounded-xl bg-gradient-to-r from-[#1a6fd4] to-[#2884e8] px-3.5 py-2.5 sm:px-4 sm:py-3 text-white shadow-xs">
+                    <div className="flex items-center justify-between gap-2 rounded-xl bg-gradient-to-r from-[#203272] to-[#355393] px-3.5 py-2.5 sm:px-4 sm:py-3 text-white shadow-xs">
                       <div className="min-w-0">
                         <p className="font-display text-xs font-bold">Good morning, Medical Director</p>
                         <p className="text-[10px] text-blue-100">
@@ -144,7 +144,7 @@ export function Hero() {
                           OPD Today
                         </p>
                         <p className="mt-1 font-display text-base sm:text-lg font-bold text-slate-900">148</p>
-                        <p className="text-[9px] sm:text-[10px] font-semibold text-[#1546a0] whitespace-nowrap">Wait 6.4m</p>
+                        <p className="text-[9px] sm:text-[10px] font-semibold text-[#192150] whitespace-nowrap">Wait 6.4m</p>
                       </div>
                       <div className="rounded-xl border border-slate-200/80 bg-white p-2 sm:p-2.5">
                         <p className="text-[8.5px] sm:text-[9px] font-bold uppercase tracking-wide text-slate-600">
@@ -218,7 +218,7 @@ export function Hero() {
 
               {/* Floating Card 2: Top-Right (Royal Blue badge) */}
               <div className="animate-float-delayed hidden sm:flex absolute -right-4 -top-12 items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-2.5 shadow-xl shadow-slate-900/8">
-                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#1a56db] text-white">
+                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#203272] text-white">
                   <FlaskConical className="h-4.5 w-4.5" />
                 </span>
                 <div>

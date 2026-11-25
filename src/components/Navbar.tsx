@@ -51,12 +51,12 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`relative py-1.5 text-[15px] font-medium transition-colors ${
-                  isActive ? "text-[#1546a0]" : "text-slate-700 hover:text-[#1546a0]"
+                  isActive ? "text-[#192150]" : "text-slate-700 hover:text-[#192150]"
                 }`}
               >
                 {link.label}
                 {isActive && (
-                  <span className="absolute inset-x-0 -bottom-0.5 h-0.5 rounded-full bg-gradient-to-r from-[#1546a0] to-[#14b8a6]" />
+                  <span className="absolute inset-x-0 -bottom-0.5 h-0.5 rounded-full bg-gradient-to-r from-[#192150] to-[#14b8a6]" />
                 )}
               </a>
             );
@@ -66,7 +66,7 @@ export function Navbar() {
         <div className="hidden md:flex items-center">
           <a
             href="#contact"
-            className="rounded-xl bg-[#1a56db] px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-[#1a56db]/25 transition-all hover:bg-[#1546a0]"
+            className="rounded-xl bg-[#203272] px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-[#203272]/25 transition-all hover:bg-[#192150]"
           >
             Start Free Trial
           </a>
@@ -91,7 +91,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-[#1546a0]"
+                className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-[#192150]"
               >
                 {link.label}
               </a>
@@ -101,7 +101,7 @@ export function Navbar() {
             <a
               href="#contact"
               onClick={() => setMobileOpen(false)}
-              className="block w-full rounded-xl bg-[#1a56db] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#1546a0]"
+              className="block w-full rounded-xl bg-[#203272] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#192150]"
             >
               Start Free Trial
             </a>

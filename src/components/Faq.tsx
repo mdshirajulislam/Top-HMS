@@ -11,7 +11,7 @@ export function Faq() {
     <section id="faq" className="bg-white py-20 lg:py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <span className="inline-block rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-xs font-bold uppercase tracking-wider text-[#0f347a]">
+          <span className="inline-block rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-xs font-bold uppercase tracking-wider text-[#192150]">
             Common Questions
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
@@ -31,7 +31,7 @@ export function Faq() {
                 key={faq.question}
                 className={`rounded-2xl border transition-all ${
                   isOpen
-                    ? "border-[#0f3b7c]/30 bg-slate-50/70 shadow-xs"
+                    ? "border-[#203272]/30 bg-slate-50/70 shadow-xs"
                     : "border-slate-200 bg-white hover:border-slate-300"
                 }`}
               >
@@ -45,7 +45,7 @@ export function Faq() {
                     {faq.question}
                   </span>
                   <ChevronDown
-                    className={`h-5 w-5 shrink-0 text-[#0f3b7c] transition-transform duration-200 ${
+                    className={`h-5 w-5 shrink-0 text-[#203272] transition-transform duration-200 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />

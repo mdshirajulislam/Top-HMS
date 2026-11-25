@@ -9,7 +9,7 @@ const STAT_STYLES = {
   },
   activity: {
     icon: <Activity className="h-5 w-5" />,
-    badge: "bg-blue-50 text-[#1546a0] ring-1 ring-blue-200/70",
+    badge: "bg-blue-50 text-[#192150] ring-1 ring-blue-200/70",
   },
   zap: {
     icon: <Zap className="h-5 w-5" />,
@@ -25,9 +25,9 @@ export function StatsBar() {
   return (
     <section id="stats" className="bg-[#f8fbff] py-6 sm:py-10 lg:py-14">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl border border-slate-200/85 bg-white px-6 py-10 shadow-lg shadow-[#1546a0]/6 sm:px-10 lg:py-12">
+        <div className="relative overflow-hidden rounded-3xl border border-slate-200/85 bg-white px-6 py-10 shadow-lg shadow-[#192150]/6 sm:px-10 lg:py-12">
           {/* Subtle top brand accent line */}
-          <span className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#1546a0] via-[#0d9488] to-[#14b8a6]" />
+          <span className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#192150] via-[#0d9488] to-[#14b8a6]" />
 
           <div className="grid grid-cols-2 gap-y-8 lg:grid-cols-4 lg:divide-x lg:divide-slate-200/80">
             {STATS.map((stat) => {

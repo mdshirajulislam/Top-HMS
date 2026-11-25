@@ -51,13 +51,13 @@ export function Insights() {
             {INSIGHTS.map((post) => (
               <article
                 key={post.title}
-                className="group flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-7 shadow-2xs transition-all hover:-translate-y-1 hover:border-[#1546a0]/30 hover:shadow-lg"
+                className="group flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-7 shadow-2xs transition-all hover:-translate-y-1 hover:border-[#192150]/30 hover:shadow-lg"
               >
                 <div>
-                  <span className="inline-block rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-bold text-[#0f347a]">
+                  <span className="inline-block rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-bold text-[#192150]">
                     {post.category}
                   </span>
-                  <h3 className="mt-4 font-display text-xl font-bold text-slate-900 transition-colors group-hover:text-[#1546a0]">
+                  <h3 className="mt-4 font-display text-xl font-bold text-slate-900 transition-colors group-hover:text-[#192150]">
                     {post.title}
                   </h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-slate-600">{post.excerpt}</p>
@@ -77,7 +77,7 @@ export function Insights() {
                   <button
                     type="button"
                     onClick={() => setSelectedPost(post)}
-                    className="inline-flex whitespace-nowrap items-center gap-1 font-bold text-[#1a56db] hover:text-[#1546a0] cursor-pointer"
+                    className="inline-flex whitespace-nowrap items-center gap-1 font-bold text-[#203272] hover:text-[#192150] cursor-pointer"
                   >
                     Read Playbook
                     <ArrowUpRight className="h-3.5 w-3.5" />
@@ -110,7 +110,7 @@ export function Insights() {
               <X className="h-5 w-5" />
             </button>
 
-            <span className="inline-block rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-bold text-[#0f347a]">
+            <span className="inline-block rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-bold text-[#192150]">
               {selectedPost.category}
             </span>
             <h3
@@ -124,7 +124,7 @@ export function Insights() {
             </p>
 
             <div className="mt-6 rounded-2xl border border-slate-200/80 bg-slate-50 p-5">
-              <p className="text-xs font-bold uppercase tracking-wider text-[#0f347a]">
+              <p className="text-xs font-bold uppercase tracking-wider text-[#192150]">
                 Key Implementation Steps
               </p>
               <ul className="mt-3 space-y-2.5">
@@ -148,7 +148,7 @@ export function Insights() {
               <a
                 href="#contact"
                 onClick={() => setSelectedPost(null)}
-                className="rounded-xl bg-[#1a56db] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#1546a0]"
+                className="rounded-xl bg-[#203272] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#192150]"
               >
                 Book Live Demo
               </a>

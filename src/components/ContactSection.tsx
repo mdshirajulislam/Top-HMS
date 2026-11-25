@@ -36,7 +36,7 @@ export function ContactSection() {
   return (
     <section id="contact" className="bg-[#f8fbff] py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="bg-brand-gradient overflow-hidden rounded-3xl px-6 py-12 text-white shadow-2xl shadow-[#0f347a]/20 sm:px-10 lg:px-14 lg:py-16">
+        <div className="bg-brand-gradient overflow-hidden rounded-3xl px-6 py-12 text-white shadow-2xl shadow-[#192150]/20 sm:px-10 lg:px-14 lg:py-16">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
             {/* Left CTA Copy */}
             <div className="lg:col-span-5">
@@ -94,7 +94,7 @@ export function ContactSection() {
                       Trial Request Received!
                     </h3>
                     {referenceId && (
-                      <p className="mt-1 text-xs font-bold uppercase tracking-wider text-[#1546a0]">
+                      <p className="mt-1 text-xs font-bold uppercase tracking-wider text-[#192150]">
                         Reference ID: {referenceId}
                       </p>
                     )}
@@ -126,7 +126,7 @@ export function ContactSection() {
                           setEmail("");
                           setReferenceId("");
                         }}
-                        className="rounded-xl border border-slate-300 px-5 py-2.5 text-sm font-semibold text-[#1546a0] hover:bg-slate-50 cursor-pointer"
+                        className="rounded-xl border border-slate-300 px-5 py-2.5 text-sm font-semibold text-[#192150] hover:bg-slate-50 cursor-pointer"
                       >
                         Submit Another Request
                       </button>
@@ -164,7 +164,7 @@ export function ContactSection() {
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             placeholder="Dr. Mahmudul Hasan"
-                            className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 outline-none transition-all focus:border-[#1a56db] focus:ring-2 focus:ring-[#1a56db]/15"
+                            className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 outline-none transition-all focus:border-[#203272] focus:ring-2 focus:ring-[#203272]/15"
                           />
                         </div>
                         <div>
@@ -181,7 +181,7 @@ export function ContactSection() {
                             value={hospital}
                             onChange={(e) => setHospital(e.target.value)}
                             placeholder="City General Hospital"
-                            className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 outline-none transition-all focus:border-[#1a56db] focus:ring-2 focus:ring-[#1a56db]/15"
+                            className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 outline-none transition-all focus:border-[#203272] focus:ring-2 focus:ring-[#203272]/15"
                           />
                         </div>
                       </div>
@@ -201,7 +201,7 @@ export function ContactSection() {
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
                             placeholder="01XXXXXXXXX"
-                            className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 outline-none transition-all focus:border-[#1a56db] focus:ring-2 focus:ring-[#1a56db]/15"
+                            className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 outline-none transition-all focus:border-[#203272] focus:ring-2 focus:ring-[#203272]/15"
                           />
                         </div>
                         <div>
@@ -217,7 +217,7 @@ export function ContactSection() {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="you@hospital.com"
-                            className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 outline-none transition-all focus:border-[#1a56db] focus:ring-2 focus:ring-[#1a56db]/15"
+                            className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 outline-none transition-all focus:border-[#203272] focus:ring-2 focus:ring-[#203272]/15"
                           />
                         </div>
                       </div>
@@ -225,7 +225,7 @@ export function ContactSection() {
                       <button
                         type="submit"
                         disabled={submitting}
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#1a56db] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#1a56db]/25 transition-all hover:bg-[#1546a0] disabled:opacity-60 cursor-pointer"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#203272] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#203272]/25 transition-all hover:bg-[#192150] disabled:opacity-60 cursor-pointer"
                       >
                         <Send className="h-4 w-4" />
                         {submitting ? "Activating Request..." : "Activate 14-Day Trial"}
