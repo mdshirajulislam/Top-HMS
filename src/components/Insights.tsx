@@ -63,13 +63,13 @@ export function Insights() {
                   <p className="mt-2.5 text-sm leading-relaxed text-slate-600">{post.excerpt}</p>
                 </div>
 
-                <div className="mt-6 flex items-center justify-between border-t border-slate-100 pt-4 text-xs font-medium text-slate-600">
-                  <div className="flex items-center gap-4">
-                    <span className="inline-flex items-center gap-1">
+                <div className="mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between border-t border-slate-100 pt-4 text-xs font-medium text-slate-600">
+                  <div className="flex flex-wrap items-center gap-4">
+                    <span className="inline-flex whitespace-nowrap items-center gap-1">
                       <Calendar className="h-3.5 w-3.5 text-[#0d9488]" />
                       {post.date}
                     </span>
-                    <span className="inline-flex items-center gap-1">
+                    <span className="inline-flex whitespace-nowrap items-center gap-1">
                       <Clock className="h-3.5 w-3.5 text-[#0d9488]" />
                       {post.readTime}
                     </span>
@@ -77,7 +77,7 @@ export function Insights() {
                   <button
                     type="button"
                     onClick={() => setSelectedPost(post)}
-                    className="inline-flex items-center gap-1 font-bold text-[#1a56db] hover:text-[#1546a0] cursor-pointer"
+                    className="inline-flex whitespace-nowrap items-center gap-1 font-bold text-[#1a56db] hover:text-[#1546a0] cursor-pointer"
                   >
                     Read Playbook
                     <ArrowUpRight className="h-3.5 w-3.5" />

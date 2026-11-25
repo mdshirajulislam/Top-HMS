@@ -33,7 +33,7 @@ export function Modules() {
   const activeModule = MODULES.find((m) => m.id === activeId) ?? MODULES[0];
 
   return (
-    <section id="modules" className="bg-[#f8fbff] py-20 lg:py-24">
+    <section id="modules" className="bg-[#f8fbff] py-14 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-[2.6rem] lg:leading-tight">
@@ -46,8 +46,11 @@ export function Modules() {
           </p>
         </div>
 
-        {/* Pill Tab Bar with Icons */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3" role="tablist">
+        {/* Pill Tab Bar with Icons: clean 2-col grid on mobile, centered pills on desktop */}
+        <div
+          className="mt-8 sm:mt-10 grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-3"
+          role="tablist"
+        >
           {MODULES.map((mod) => {
             const isActive = mod.id === activeModule.id;
             return (
@@ -57,57 +60,57 @@ export function Modules() {
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActiveId(mod.id)}
-                className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all cursor-pointer ${
+                className={`inline-flex items-center justify-center gap-1.5 sm:gap-2 rounded-full px-3 py-2.5 sm:px-5 text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                   isActive
                     ? "bg-[#1a56db] text-white shadow-lg shadow-[#1a56db]/30"
                     : "border border-slate-200/90 bg-white text-slate-700 shadow-2xs hover:border-[#1a56db]/40 hover:text-[#1a56db]"
                 }`}
               >
                 {TAB_ICONS[mod.id]}
-                <span>{mod.tabLabel}</span>
+                <span className="truncate">{mod.tabLabel}</span>
               </button>
             );
           })}
         </div>
 
         {/* Elevated White Showcase Card */}
-        <div className="mt-10 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-10 lg:p-12">
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
+        <div className="mt-8 sm:mt-10 rounded-3xl border border-slate-200/80 bg-white p-4 shadow-xl shadow-slate-900/5 sm:p-10 lg:p-12">
+          <div className="grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-12">
             {/* Left High-Contrast Light Workspace Preview */}
             <div className="lg:col-span-6">
               <div className="overflow-hidden rounded-2xl border border-slate-200/90 bg-[#f4f8fd] shadow-lg shadow-[#1546a0]/8">
                 {/* Brand Gradient Window Header */}
-                <div className="flex items-center justify-between gap-2 bg-gradient-to-r from-[#1546a0] to-[#0d9488] px-4 py-3 text-white">
-                  <div className="flex items-center gap-1.5">
-                    <span className="h-2.5 w-2.5 rounded-full bg-white/50" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-white/50" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-white/50" />
-                    <span className="ml-2 text-xs font-bold tracking-tight text-white">
+                <div className="flex flex-wrap items-center justify-between gap-2 bg-gradient-to-r from-[#1546a0] to-[#0d9488] px-3.5 py-2.5 sm:px-4 sm:py-3 text-white">
+                  <div className="flex items-center gap-1.5 min-w-0">
+                    <span className="hidden sm:inline-block h-2.5 w-2.5 rounded-full bg-white/50" />
+                    <span className="hidden sm:inline-block h-2.5 w-2.5 rounded-full bg-white/50" />
+                    <span className="hidden sm:inline-block h-2.5 w-2.5 rounded-full bg-white/50" />
+                    <span className="sm:ml-2 truncate text-xs font-bold tracking-tight text-white">
                       Top HMS · {activeModule.tabLabel}
                     </span>
                   </div>
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1 text-[11px] font-bold text-[#1546a0] shadow-xs">
+                  <span className="inline-flex shrink-0 whitespace-nowrap items-center gap-1 rounded-full bg-white px-2.5 py-1 text-[10px] sm:text-[11px] font-bold text-[#1546a0] shadow-xs">
                     <Sparkles className="h-3 w-3 text-[#e85227]" />
                     {activeModule.badge}
                   </span>
                 </div>
 
                 {/* High-Contrast White Metrics + Activity Feed */}
-                <div className="p-5 space-y-4">
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="rounded-xl border border-slate-200/90 bg-white p-4 shadow-2xs">
-                      <p className="text-xs font-semibold text-slate-500">
+                <div className="p-3.5 sm:p-5 space-y-3.5 sm:space-y-4">
+                  <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
+                    <div className="rounded-xl border border-slate-200/90 bg-white p-3 sm:p-4 shadow-2xs">
+                      <p className="text-[11px] sm:text-xs font-semibold text-slate-500">
                         {activeModule.metricLabel}
                       </p>
-                      <p className="mt-1 font-display text-2xl font-extrabold text-[#1546a0]">
+                      <p className="mt-1 whitespace-nowrap font-display text-xl sm:text-2xl font-extrabold text-[#1546a0]">
                         {activeModule.metricValue}
                       </p>
                     </div>
-                    <div className="rounded-xl border border-slate-200/90 bg-white p-4 shadow-2xs">
-                      <p className="text-xs font-semibold text-slate-500">
+                    <div className="rounded-xl border border-slate-200/90 bg-white p-3 sm:p-4 shadow-2xs">
+                      <p className="text-[11px] sm:text-xs font-semibold text-slate-500">
                         {activeModule.secondaryMetricLabel}
                       </p>
-                      <p className="mt-1 font-display text-2xl font-extrabold text-[#0d9488]">
+                      <p className="mt-1 whitespace-nowrap font-display text-xl sm:text-2xl font-extrabold text-[#0d9488]">
                         {activeModule.secondaryMetricValue}
                       </p>
                     </div>
@@ -118,14 +121,14 @@ export function Modules() {
                     {activeModule.previewRows.map((row) => (
                       <div
                         key={row.label}
-                        className="flex items-center justify-between gap-3 rounded-xl border border-slate-200/90 bg-white px-4 py-3 shadow-2xs"
+                        className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3 rounded-xl border border-slate-200/90 bg-white px-3.5 py-3 sm:px-4 shadow-2xs"
                       >
-                        <div className="min-w-0">
-                          <p className="truncate text-sm font-bold text-slate-900">{row.label}</p>
-                          <p className="truncate text-xs font-medium text-slate-500">{row.meta}</p>
+                        <div className="min-w-0 w-full sm:w-auto">
+                          <p className="text-sm font-bold text-slate-900 sm:truncate">{row.label}</p>
+                          <p className="text-xs font-medium text-slate-500 sm:truncate">{row.meta}</p>
                         </div>
                         <span
-                          className={`shrink-0 rounded-full border px-3 py-1 text-[11px] font-bold ${TONE_BADGE[row.tone]}`}
+                          className={`shrink-0 whitespace-nowrap rounded-full border px-3 py-0.5 sm:py-1 text-[11px] font-bold ${TONE_BADGE[row.tone]}`}
                         >
                           {row.status}
                         </span>

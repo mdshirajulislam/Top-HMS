@@ -21,36 +21,36 @@ export function Hero() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
           {/* Left Column */}
           <div className="lg:col-span-6">
-            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-4 py-2 text-xs font-semibold text-[#1546a0] shadow-sm">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              <Star className="h-3.5 w-3.5 fill-emerald-500 text-emerald-500" />
-              <span>Next-Gen Healthcare ERP · Cloud &amp; Offline Ready</span>
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full border border-slate-200/80 bg-white px-3 py-1.5 sm:px-4 sm:py-2 text-[11px] sm:text-xs font-semibold text-[#1546a0] shadow-sm">
+              <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-500" />
+              <Star className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0 fill-emerald-500 text-emerald-500" />
+              <span className="whitespace-nowrap">Next-Gen Healthcare ERP · Cloud &amp; Offline</span>
             </div>
 
-            <h1 className="mt-7 font-display text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl lg:text-[3.5rem] lg:leading-[1.12]">
+            <h1 className="mt-6 sm:mt-7 font-display text-[2.2rem] leading-[1.15] font-extrabold tracking-tight text-slate-950 sm:text-5xl lg:text-[3.5rem] lg:leading-[1.12]">
               Modern Healthcare,
               <span className="text-brand-gradient block">Effortless Control</span>
             </h1>
 
-            <p className="mt-5 max-w-lg text-base leading-relaxed text-slate-600 sm:text-lg">
+            <p className="mt-4 sm:mt-5 max-w-lg text-[15px] leading-relaxed text-slate-600 sm:text-lg">
               Run every clinical and financial workflow — from OPD queues and ICU beds to
               diagnostics, pharmacy POS, and audit-proof billing — in one unified platform.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-7 sm:mt-8 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-4">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-xl bg-[#1a56db] px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#1a56db]/25 transition-all hover:-translate-y-0.5 hover:bg-[#1546a0]"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#1a56db] px-4 py-3 sm:px-7 sm:py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#1a56db]/25 transition-all hover:-translate-y-0.5 hover:bg-[#1546a0]"
               >
-                <Rocket className="h-4 w-4" />
-                Book Free Trial
+                <Rocket className="h-4 w-4 shrink-0" />
+                <span className="whitespace-nowrap">Book Free Trial</span>
               </a>
               <a
                 href="#modules"
-                className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-7 py-3.5 text-sm font-semibold text-slate-800 shadow-sm transition-all hover:border-slate-300 hover:bg-slate-50"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 sm:px-7 sm:py-3.5 text-sm font-semibold text-slate-800 shadow-sm transition-all hover:border-slate-300 hover:bg-slate-50"
               >
-                <PlayCircle className="h-4 w-4 text-slate-900" />
-                Explore Platform
+                <PlayCircle className="h-4 w-4 shrink-0 text-slate-900" />
+                <span className="whitespace-nowrap">Explore Platform</span>
               </a>
             </div>
 
@@ -118,40 +118,40 @@ export function Hero() {
                   {/* Main Light Workspace */}
                   <div className="col-span-12 sm:col-span-9 p-4 space-y-3">
                     {/* Blue Welcome Banner */}
-                    <div className="flex items-center justify-between rounded-xl bg-gradient-to-r from-[#1a6fd4] to-[#2884e8] px-4 py-3 text-white shadow-xs">
-                      <div>
+                    <div className="flex items-center justify-between gap-2 rounded-xl bg-gradient-to-r from-[#1a6fd4] to-[#2884e8] px-3.5 py-2.5 sm:px-4 sm:py-3 text-white shadow-xs">
+                      <div className="min-w-0">
                         <p className="font-display text-xs font-bold">Good morning, Medical Director</p>
                         <p className="text-[10px] text-blue-100">
-                          Top HMS Command Center · All 6 Clinical Units Operational
+                          Top HMS Command Center · 6 Units Live
                         </p>
                       </div>
-                      <span className="rounded-lg bg-white/20 px-2.5 py-1 text-[10px] font-semibold">
+                      <span className="shrink-0 whitespace-nowrap rounded-lg bg-white/20 px-2.5 py-1 text-[10px] font-semibold">
                         Offline Ready
                       </span>
                     </div>
 
                     {/* 3 White KPI Cards */}
-                    <div className="grid grid-cols-3 gap-2.5">
-                      <div className="rounded-xl border border-slate-200/80 bg-white p-2.5">
-                        <p className="text-[9px] font-bold uppercase tracking-wide text-slate-600">
+                    <div className="grid grid-cols-3 gap-2 sm:gap-2.5">
+                      <div className="rounded-xl border border-slate-200/80 bg-white p-2 sm:p-2.5">
+                        <p className="text-[8.5px] sm:text-[9px] font-bold uppercase tracking-wide text-slate-600">
                           Active Beds
                         </p>
-                        <p className="mt-1 font-display text-lg font-bold text-slate-900">342</p>
-                        <p className="text-[10px] font-semibold text-emerald-700">88% Occupied</p>
+                        <p className="mt-1 font-display text-base sm:text-lg font-bold text-slate-900">342</p>
+                        <p className="text-[9px] sm:text-[10px] font-semibold text-emerald-700 whitespace-nowrap">88% Full</p>
                       </div>
-                      <div className="rounded-xl border border-slate-200/80 bg-white p-2.5">
-                        <p className="text-[9px] font-bold uppercase tracking-wide text-slate-600">
+                      <div className="rounded-xl border border-slate-200/80 bg-white p-2 sm:p-2.5">
+                        <p className="text-[8.5px] sm:text-[9px] font-bold uppercase tracking-wide text-slate-600">
                           OPD Today
                         </p>
-                        <p className="mt-1 font-display text-lg font-bold text-slate-900">148</p>
-                        <p className="text-[10px] font-semibold text-[#1546a0]">Avg wait 6.4m</p>
+                        <p className="mt-1 font-display text-base sm:text-lg font-bold text-slate-900">148</p>
+                        <p className="text-[9px] sm:text-[10px] font-semibold text-[#1546a0] whitespace-nowrap">Wait 6.4m</p>
                       </div>
-                      <div className="rounded-xl border border-slate-200/80 bg-white p-2.5">
-                        <p className="text-[9px] font-bold uppercase tracking-wide text-slate-600">
+                      <div className="rounded-xl border border-slate-200/80 bg-white p-2 sm:p-2.5">
+                        <p className="text-[8.5px] sm:text-[9px] font-bold uppercase tracking-wide text-slate-600">
                           Daily Billing
                         </p>
-                        <p className="mt-1 font-display text-lg font-bold text-slate-900">৳ 4.8L</p>
-                        <p className="text-[10px] font-semibold text-emerald-700">Zero leakage</p>
+                        <p className="mt-1 font-display text-base sm:text-lg font-bold text-slate-900">৳ 4.8L</p>
+                        <p className="text-[9px] sm:text-[10px] font-semibold text-emerald-700 whitespace-nowrap">Zero Leak</p>
                       </div>
                     </div>
 

@@ -23,7 +23,7 @@ const STAT_STYLES = {
 
 export function StatsBar() {
   return (
-    <section id="stats" className="bg-[#f8fbff] py-10 lg:py-14">
+    <section id="stats" className="bg-[#f8fbff] py-6 sm:py-10 lg:py-14">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl border border-slate-200/85 bg-white px-6 py-10 shadow-lg shadow-[#1546a0]/6 sm:px-10 lg:py-12">
           {/* Subtle top brand accent line */}
