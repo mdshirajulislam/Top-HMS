@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import logoImg from "@/assets/top-hms-logo.png";
 
 interface BrandLogoProps {
   variant?: "light" | "dark";
@@ -10,24 +12,14 @@ export function BrandLogo({ variant = "light" }: BrandLogoProps) {
 
   return (
     <span className="inline-flex items-center gap-2.5 select-none">
-      <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#203272] to-[#0d9488] shadow-sm shadow-[#203272]/20">
-        <svg
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path
-            d="M12 3.5V20.5M3.5 12H20.5"
-            stroke="white"
-            strokeWidth="3.2"
-            strokeLinecap="round"
-          />
-          <circle cx="12" cy="12" r="2.2" fill="#5eead4" />
-        </svg>
-      </span>
+      <Image
+        src={logoImg}
+        alt="Top HMS Logo"
+        width={42}
+        height={42}
+        priority
+        className="h-10 w-10 object-contain rounded-lg"
+      />
       <span className="flex flex-col leading-none">
         <span className={`font-display text-xl font-bold tracking-tight ${textColor}`}>
           Top <span className={subColor}>HMS</span>
