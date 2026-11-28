@@ -22,12 +22,12 @@ html {
 body {
   background-color: var(--surface-bg);
   color: var(--text-main);
-  font-family: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-bangla), var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, .font-display {
-  font-family: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-bangla), var(--font-sora), ui-sans-serif, system-ui, sans-serif;
 }
 
 .text-brand-gradient {

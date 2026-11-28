@@ -39,11 +39,11 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#hero" aria-label="Top HMS Home" className="focus:outline-none">
+        <a href="#hero" aria-label="Top HMS হোম" className="focus:outline-none">
           <BrandLogo variant="light" />
         </a>
 
-        <nav className="hidden md:flex items-center gap-7" aria-label="Primary Navigation">
+        <nav className="hidden md:flex items-center gap-7" aria-label="প্রধান নেভিগেশন">
           {NAV_LINKS.map((link) => {
             const isActive = activeSection === link.href;
             return (
@@ -68,7 +68,7 @@ export function Navbar() {
             href="#contact"
             className="rounded-xl bg-[#203272] px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-[#203272]/25 transition-all hover:bg-[#192150]"
           >
-            Start Free Trial
+            ফ্রি ট্রায়াল শুরু করুন
           </a>
         </div>
 
@@ -76,7 +76,7 @@ export function Navbar() {
           type="button"
           onClick={() => setMobileOpen((prev) => !prev)}
           className="inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100 md:hidden cursor-pointer"
-          aria-label="Toggle navigation"
+          aria-label="মেনু খুলুন"
           aria-expanded={mobileOpen}
         >
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -103,7 +103,7 @@ export function Navbar() {
               onClick={() => setMobileOpen(false)}
               className="block w-full rounded-xl bg-[#203272] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#192150]"
             >
-              Start Free Trial
+              ফ্রি ট্রায়াল শুরু করুন
             </a>
           </div>
         </div>

@@ -5,24 +5,24 @@ import { ArrowUpRight, Clock, Calendar, X, CheckCircle2 } from "lucide-react";
 import { INSIGHTS, InsightItem } from "@/data/siteData";
 
 const PLAYBOOK_DETAILS: Record<string, { summary: string; takeaways: string[] }> = {
-  "Hospital Operations": {
+  "হসপিটাল অপারেশন": {
     summary:
-      "High-volume outpatient clinics lose hours every day to handwritten tokens, overcrowded waiting rooms, and missed consultant slots. Switching to a unified digital queue cuts bottlenecks within the first week.",
+      "ব্যস্ত আউটডোর ক্লিনিকগুলোতে হাতে লেখা টোকেন, অতিরিক্ত ভিড় এবং অগোছালো সিরিয়ালের কারণে প্রতিদিন বহু কর্মঘণ্টা নষ্ট হয়। সমন্বিত ডিজিটাল কিউ চালু করলে প্রথম সপ্তাহ থেকেই রোগী সেবা অনেক দ্রুত হয়।",
     takeaways: [
-      "Pre-register walk-in and online patients in under 45 seconds with QR or mobile lookup.",
-      "Stream live chamber tokens to waiting-area TVs so patients know exact wait times.",
-      "Trigger automated VoIP and SMS reminders 2 hours prior to reduce no-shows by up to 35%.",
-      "Sync digital prescriptions directly to Pharmacy POS and Diagnostic Lab without paper slips.",
+      "মোবাইল নম্বর বা QR স্ক্যানের মাধ্যমে ৪৫ সেকেন্ডের কম সময়ে রোগী রেজিস্ট্রেশন।",
+      "ওয়েটিং এরিয়ার টিভিতে লাইভ চেম্বার টোকেন প্রদর্শন, যাতে রোগীরা সঠিক সময় জানতে পারেন।",
+      "অ্যাপয়েন্টমেন্টের ২ ঘণ্টা আগে স্বয়ংক্রিয় VoIP ও SMS রিমাইন্ডার, যা অনুপস্থিতি ৩৫% পর্যন্ত কমায়।",
+      "ডিজিটাল প্রেসক্রিপশন সরাসরি ফার্মেসি POS ও ডায়াগনস্টিক ল্যাবে সিঙ্ক হওয়ার সুবিধা।",
     ],
   },
-  "Revenue Protection": {
+  "আয় সুরক্ষা": {
     summary:
-      "When OPD, IPD nursing stations, lab analyzers, and pharmacy counters run on separate spreadsheets, unbilled consumables and manual discharge errors silently drain 8–12% of hospital revenue.",
+      "OPD, IPD নার্সিং স্টেশন, ল্যাব অ্যানালাইজার এবং ফার্মেসি কাউন্টার আলাদা আলাদা স্প্রেডশিটে চললে বিল না হওয়া সামগ্রী ও ডিসচার্জের ভুলের কারণে হসপিটালের ১০-১২% রাজস্ব নীরবে হারিয়ে যায়।",
     takeaways: [
-      "Capture every lab test, ward bed charge, and pharmacy dispense automatically to the patient folio.",
-      "Enforce double-entry ledger reconciliation on every cash, card, and bKash/Nagad collection.",
-      "Lock discount and refund permissions with role-based approval trails.",
-      "Close daily shift cash sheets in minutes with real-time department revenue dashboards.",
+      "প্রতিটি ল্যাব টেস্ট, ওয়ার্ড বেড চার্জ ও ফার্মেসি বিল স্বয়ংক্রিয়ভাবে রোগীর ফোলিওতে যুক্ত হয়।",
+      "ক্যাশ, কার্ড এবং bKash/Nagad কালেকশনে ডাবল-এন্ট্রি লেজার মিলিয়ে নেওয়া।",
+      "রোল-ভিত্তিক অনুমোদন ও অডিট ট্রেইল দিয়ে ডিসকাউন্ট ও রিফান্ড নিয়ন্ত্রণ।",
+      "রিয়েল-টাইম ডিপার্টমেন্ট রিপোর্টের মাধ্যমে কয়েক মিনিটেই দৈনিক ক্যাশ ক্লোজিং।",
     ],
   },
 };
@@ -35,15 +35,15 @@ export function Insights() {
       <section id="insights" className="bg-slate-50/80 py-20 border-t border-slate-200/70">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <span className="inline-block rounded-full border border-teal-300/70 bg-white px-4 py-1 text-xs font-bold uppercase tracking-wider text-[#0f5156] shadow-2xs">
-              Clinical Playbooks
+            <span className="inline-block rounded-full border border-teal-300/70 bg-white px-4 py-1 text-xs font-bold tracking-wider text-[#0f5156] shadow-2xs">
+              ক্লিনিক্যাল গাইড
             </span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              Guides for Modern <span className="text-brand-gradient">Hospital Leaders</span>
+              হসপিটাল পরিচালনার <span className="text-brand-gradient">কার্যকর পরামর্শ</span>
             </h2>
             <p className="mt-3 text-base text-slate-600">
-              Actionable strategies for reducing wait times, automating diagnostics, and protecting
-              hospital revenue.
+              রোগীর অপেক্ষার সময় কমানো, ডায়াগনস্টিক অটোমেশন এবং হসপিটালের আয় সুরক্ষার বাস্তবমুখী
+              কৌশল।
             </p>
           </div>
 
@@ -79,7 +79,7 @@ export function Insights() {
                     onClick={() => setSelectedPost(post)}
                     className="inline-flex whitespace-nowrap items-center gap-1 font-bold text-[#203272] hover:text-[#192150] cursor-pointer"
                   >
-                    Read Playbook
+                    বিস্তারিত পড়ুন
                     <ArrowUpRight className="h-3.5 w-3.5" />
                   </button>
                 </div>
@@ -104,7 +104,7 @@ export function Insights() {
             <button
               type="button"
               onClick={() => setSelectedPost(null)}
-              aria-label="Close playbook"
+              aria-label="বন্ধ করুন"
               className="absolute right-5 top-5 rounded-lg p-1.5 text-slate-500 hover:bg-slate-100 hover:text-slate-800 cursor-pointer"
             >
               <X className="h-5 w-5" />
@@ -124,8 +124,8 @@ export function Insights() {
             </p>
 
             <div className="mt-6 rounded-2xl border border-slate-200/80 bg-slate-50 p-5">
-              <p className="text-xs font-bold uppercase tracking-wider text-[#192150]">
-                Key Implementation Steps
+              <p className="text-xs font-bold tracking-wider text-[#192150]">
+                বাস্তবায়নের মূল ধাপসমূহ
               </p>
               <ul className="mt-3 space-y-2.5">
                 {(PLAYBOOK_DETAILS[selectedPost.category]?.takeaways ?? []).map((point) => (
@@ -143,14 +143,14 @@ export function Insights() {
                 onClick={() => setSelectedPost(null)}
                 className="rounded-xl border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 cursor-pointer"
               >
-                Close
+                বন্ধ করুন
               </button>
               <a
                 href="#contact"
                 onClick={() => setSelectedPost(null)}
                 className="rounded-xl bg-[#203272] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#192150]"
               >
-                Book Live Demo
+                লাইভ ডেমো বুক করুন
               </a>
             </div>
           </div>

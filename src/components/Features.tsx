@@ -40,7 +40,7 @@ const CARD_META: Record<
     tagStyle: "bg-indigo-50 text-indigo-900 border-indigo-200",
   },
   "bangla-voip": {
-    tag: "Bangla & VoIP",
+    tag: "বাংলা ও VoIP",
     iconBg: "bg-orange-50 text-[#b83714] ring-1 ring-orange-200/80",
     iconHover: "group-hover:bg-[#e85227] group-hover:text-white group-hover:ring-[#e85227]",
     tagStyle: "bg-orange-50 text-[#b83714] border-orange-300/80",
@@ -58,15 +58,16 @@ export function Features() {
     <section id="features" className="bg-white py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="inline-block rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-xs font-bold uppercase tracking-wider text-[#192150]">
-            Core Capabilities
+          <span className="inline-block rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-xs font-bold tracking-wider text-[#192150]">
+            মূল বৈশিষ্ট্যসমূহ
           </span>
           <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
-            Built for <span className="text-brand-gradient">Clinical Excellence</span>
+            আধুনিক ক্লিনিক্যাল সেবার{" "}
+            <span className="text-brand-gradient">নির্ভরযোগ্য সমাধান</span>
           </h2>
           <p className="mt-3 text-base text-slate-500">
-            Engineered for high-volume clinics, diagnostic networks, and multi-specialty hospitals
-            that demand speed and accuracy.
+            ছোট ক্লিনিক, ডায়াগনস্টিক সেন্টার কিংবা বড় মাল্টি-স্পেশালিটি হসপিটাল — দ্রুততা ও
+            নির্ভুলতার জন্য বিশেষভাবে নির্মিত।
           </p>
         </div>
 
@@ -78,10 +79,8 @@ export function Features() {
                 key={feature.id}
                 className="group relative overflow-hidden rounded-2xl border border-slate-200/85 bg-gradient-to-b from-white to-slate-50/50 p-7 shadow-sm shadow-slate-900/4 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#192150]/30 hover:shadow-xl hover:shadow-[#192150]/8"
               >
-                {/* Top gradient accent reveal on hover */}
                 <span className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#192150] via-[#0d9488] to-[#14b8a6] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-                {/* Top row: Icon + Subtle Capability Pill */}
                 <div className="flex items-center justify-between gap-3">
                   <div
                     className={`inline-flex h-12 w-12 items-center justify-center rounded-xl transition-all duration-300 ${meta.iconBg} ${meta.iconHover}`}

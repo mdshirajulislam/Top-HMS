@@ -18,12 +18,12 @@ export function Pricing() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-[2.6rem] lg:leading-tight">
-            Transparent Pricing <span className="text-brand-gradient">That</span>
-            <span className="text-brand-gradient block">Scales With You</span>
+            স্বচ্ছ ও সাশ্রয়ী <span className="text-brand-gradient">প্যাকেজ</span>
+            <span className="text-brand-gradient block">প্রতিটি হসপিটালের জন্য</span>
           </h2>
           <p className="mt-4 text-base text-slate-600">
-            Predictable monthly plans with zero hidden charges. Free staff onboarding and guided
-            data migration included.
+            কোনো গোপন চার্জ নেই। যেকোনো সময় পরিবর্তনযোগ্য। প্রতিটি প্ল্যানে বিনামূল্যে স্টাফ
+            ট্রেনিং ও ডেটা মাইগ্রেশন অন্তর্ভুক্ত।
           </p>
 
           {/* Billing Cycle + Currency Controls */}
@@ -38,7 +38,7 @@ export function Pricing() {
                     : "text-slate-600 hover:text-slate-900"
                 }`}
               >
-                Monthly
+                মাসিক
               </button>
               <button
                 type="button"
@@ -49,7 +49,7 @@ export function Pricing() {
                     : "text-slate-600 hover:text-slate-900"
                 }`}
               >
-                Yearly
+                বার্ষিক
                 <span
                   className={`rounded-full px-1.5 py-0.5 text-[10px] font-bold ${
                     billingCycle === "yearly"
@@ -57,7 +57,7 @@ export function Pricing() {
                       : "bg-teal-50 text-[#0f5156]"
                   }`}
                 >
-                  Save 20%
+                  ২০% সাশ্রয়
                 </span>
               </button>
             </div>
@@ -68,22 +68,22 @@ export function Pricing() {
                 onClick={() => setCurrency("BDT")}
                 className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-all cursor-pointer ${
                   currency === "BDT"
-                    ? "bg-[#192150] text-white shadow-xs"
+                    ? "bg-[#203272] text-white shadow-xs"
                     : "text-slate-600 hover:text-slate-900"
                 }`}
               >
-                Bangladesh (BDT)
+                বাংলাদেশ (BDT)
               </button>
               <button
                 type="button"
                 onClick={() => setCurrency("USD")}
                 className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-all cursor-pointer ${
                   currency === "USD"
-                    ? "bg-[#192150] text-white shadow-xs"
+                    ? "bg-[#203272] text-white shadow-xs"
                     : "text-slate-600 hover:text-slate-900"
                 }`}
               >
-                International (USD)
+                আন্তর্জাতিক (USD)
               </button>
             </div>
           </div>
@@ -91,7 +91,7 @@ export function Pricing() {
 
         <div className="mt-14 grid grid-cols-1 gap-7 lg:grid-cols-3 lg:items-stretch">
           {PRICING_TIERS.map((tier) => {
-            const isCustom = tier.priceBDT === "Contact Us";
+            const isCustom = tier.priceBDT === "যোগাযোগ করুন";
             const monthlyAmount =
               currency === "BDT"
                 ? tier.priceBDT.replace("৳ ", "")
@@ -115,7 +115,7 @@ export function Pricing() {
                   <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#192150] to-[#0d9488] px-4 py-1.5 text-xs font-bold text-white shadow-md shadow-[#192150]/30">
                       <Star className="h-3.5 w-3.5 fill-white text-white" />
-                      Most Popular
+                      সবচেয়ে জনপ্রিয়
                     </span>
                   </div>
                 )}
@@ -132,7 +132,7 @@ export function Pricing() {
                   <div className="mt-4 flex items-baseline gap-1.5">
                     {isCustom ? (
                       <span className="font-display text-3xl font-extrabold text-[#192150]">
-                        Contact Us
+                        যোগাযোগ করুন
                       </span>
                     ) : (
                       <>
@@ -147,7 +147,7 @@ export function Pricing() {
 
                   <p className="mt-2 text-xs font-medium text-slate-600">
                     {tier.tagline}
-                    {!isCustom && billingCycle === "yearly" ? " · Billed annually" : ""}
+                    {!isCustom && billingCycle === "yearly" ? " · বার্ষিক বিলিং" : ""}
                   </p>
                 </div>
 

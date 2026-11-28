@@ -8,20 +8,20 @@ export function Footer() {
     <footer className="border-t border-slate-200 bg-white text-slate-800">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-x-6 gap-y-8 lg:grid-cols-12 lg:gap-10">
-          {/* Col 1: Brand + Social Icons (Centered on mobile, left-aligned on desktop) */}
+          {/* Col 1: Brand + Social Icons */}
           <div className="col-span-2 flex flex-col items-center text-center lg:col-span-4 lg:items-start lg:text-left">
-            <a href="#hero" aria-label="Top HMS Home">
+            <a href="#hero" aria-label="Top HMS হোম">
               <BrandLogo variant="light" />
             </a>
             <p className="mt-4 max-w-xs text-sm font-medium leading-relaxed text-slate-700">
-              Modern, offline-resilient Hospital Management System built for clinics, diagnostic
-              centers, and multi-specialty hospitals.
+              ক্লিনিক, ডায়াগনস্টিক সেন্টার এবং মাল্টি-স্পেশালিটি হসপিটালের জন্য নির্মিত আধুনিক ও
+              অফলাইন-সক্ষম হসপিটাল ম্যানেজমেন্ট সিস্টেম।
             </p>
 
             {/* Social Circle Links */}
             <div className="mt-5 flex items-center justify-center gap-2.5 lg:justify-start">
               <a
-                href="https://www.facebook.com/optevecom"
+                href="https://www.facebook.com/profile.php?id=61596645346811"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -69,8 +69,8 @@ export function Footer() {
 
           {/* Col 2: Quick Links */}
           <div className="col-span-1 lg:col-span-2">
-            <h4 className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-950">
-              Quick Links
+            <h4 className="font-display text-xs sm:text-sm font-bold tracking-wider text-slate-950">
+              দ্রুত লিংক
             </h4>
             <ul className="mt-4 space-y-2.5 text-sm font-medium">
               {NAV_LINKS.map((link) => (
@@ -88,8 +88,8 @@ export function Footer() {
 
           {/* Col 3: Modules */}
           <div className="col-span-1 lg:col-span-3">
-            <h4 className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-950">
-              Modules
+            <h4 className="font-display text-xs sm:text-sm font-bold tracking-wider text-slate-950">
+              মডিউলসমূহ
             </h4>
             <ul className="mt-4 space-y-2.5 text-sm font-medium">
               {MODULES.map((mod) => (
@@ -107,8 +107,8 @@ export function Footer() {
 
           {/* Col 4: Contact & Support */}
           <div className="col-span-2 border-t border-slate-200 pt-7 pr-14 lg:col-span-3 lg:border-t-0 lg:pt-0 lg:pr-0">
-            <h4 className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-950">
-              Contact &amp; Support
+            <h4 className="font-display text-xs sm:text-sm font-bold tracking-wider text-slate-950">
+              যোগাযোগ ও সাপোর্ট
             </h4>
             <ul className="mt-4 space-y-3 text-sm font-medium text-slate-700">
               <li className="flex items-start gap-2.5">

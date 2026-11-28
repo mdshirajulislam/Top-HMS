@@ -37,12 +37,12 @@ export function Modules() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-[2.6rem] lg:leading-tight">
-            Every Department,
-            <span className="text-brand-gradient block">Connected in Real Time</span>
+            হসপিটালের প্রতিটি বিভাগ,
+            <span className="text-brand-gradient block">রিয়েল-টাইমে সংযুক্ত</span>
           </h2>
           <p className="mt-4 text-base text-slate-500">
-            Eliminate paper handoffs and disconnected spreadsheets with six tightly integrated
-            hospital modules.
+            কাগজের ফাইল ও আলাদা আলাদা স্প্রেডশিটের ঝামেলা বাদ দিয়ে ৬টি সমন্বিত মডিউলে সম্পূর্ণ
+            হসপিটাল পরিচালনা করুন।
           </p>
         </div>
 

@@ -19,7 +19,7 @@ export function FloatingWidgets() {
         <button
           type="button"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          aria-label="Back to top"
+          aria-label="উপরে যান"
           className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-[#192150] shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#192150] hover:text-white cursor-pointer"
         >
           <ArrowUp className="h-4 w-4 sm:h-4.5 sm:w-4.5" />
@@ -30,7 +30,7 @@ export function FloatingWidgets() {
         href={SITE_INFO.whatsappHref}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat with Top HMS support"
+        aria-label="Top HMS সাপোর্টে চ্যাট করুন"
         className="relative flex h-11 w-11 sm:h-13 sm:w-13 items-center justify-center rounded-full bg-[#203272] text-white shadow-xl shadow-[#203272]/35 transition-all hover:-translate-y-0.5 hover:bg-[#192150]"
       >
         <MessageSquareText className="h-5 w-5 sm:h-6 sm:w-6" />

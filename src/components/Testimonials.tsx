@@ -23,15 +23,15 @@ export function Testimonials() {
     >
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <span className="inline-block rounded-full border border-teal-300/70 bg-white px-4 py-1 text-xs font-bold uppercase tracking-wider text-[#0f5156] shadow-2xs">
-            Designed for Care Teams
+          <span className="inline-block rounded-full border border-teal-300/70 bg-white px-4 py-1 text-xs font-bold tracking-wider text-[#0f5156] shadow-2xs">
+            সব টিমের জন্য উপযোগী
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Trusted Across <span className="text-brand-gradient">Every Department</span>
+            প্রতিটি বিভাগের <span className="text-brand-gradient">আস্থার প্রতীক</span>
           </h2>
           <p className="mt-3 text-base text-slate-600">
-            Empowering physicians, finance directors, and nursing teams with role-focused workflows
-            that save hours every shift.
+            ডাক্তার, অ্যাকাউন্টস ম্যানেজার এবং নার্সিং টিম — সবার কাজের ধরন অনুযায়ী সাজানো সহজ
+            ওয়ার্কফ্লো।
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export function Testimonials() {
             <button
               type="button"
               onClick={handlePrev}
-              aria-label="Previous role"
+              aria-label="পূর্ববর্তী"
               className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition-colors hover:border-[#203272] hover:text-[#203272] cursor-pointer"
             >
               <ChevronLeft className="h-5 w-5" />
@@ -73,7 +73,7 @@ export function Testimonials() {
                   key={item.role}
                   type="button"
                   onClick={() => setIndex(idx)}
-                  aria-label={`View slide ${idx + 1}`}
+                  aria-label={`স্লাইড ${idx + 1} দেখুন`}
                   className={`h-2.5 rounded-full transition-all cursor-pointer ${
                     idx === index ? "w-8 bg-[#203272]" : "w-2.5 bg-slate-300 hover:bg-slate-400"
                   }`}
@@ -84,7 +84,7 @@ export function Testimonials() {
             <button
               type="button"
               onClick={handleNext}
-              aria-label="Next role"
+              aria-label="পরবর্তী"
               className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition-colors hover:border-[#203272] hover:text-[#203272] cursor-pointer"
             >
               <ChevronRight className="h-5 w-5" />

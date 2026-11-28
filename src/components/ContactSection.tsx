@@ -17,7 +17,7 @@ export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !hospital.trim() || !phone.trim()) {
-      setError("Please fill in your name, hospital name, and mobile number.");
+      setError("অনুগ্রহ করে আপনার নাম, হসপিটালের নাম এবং মোবাইল নম্বর লিখুন।");
       return;
     }
     setSubmitting(true);
@@ -29,7 +29,7 @@ export function ContactSection() {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Top HMS Team, I requested a 14-day free trial (${referenceId || "New Inquiry"}).\nName: ${name}\nHospital: ${hospital}\nPhone: ${phone}${email ? `\nEmail: ${email}` : ""}`
+    `আসসালামু আলাইকুম Top HMS টিম, আমি ১৪ দিনের ফ্রি ট্রায়ালের জন্য আবেদন করেছি (${referenceId || "নতুন আবেদন"})।\nনাম: ${name}\nহসপিটাল: ${hospital}\nমোবাইল: ${phone}${email ? `\nইমেইল: ${email}` : ""}`
   );
   const whatsappLink = `${SITE_INFO.whatsappHref}?text=${whatsappMessage}`;
 
@@ -40,29 +40,29 @@ export function ContactSection() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
             {/* Left CTA Copy */}
             <div className="lg:col-span-5">
-              <span className="inline-block rounded-full border border-white/30 bg-white/15 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white">
-                Launch in Days
+              <span className="inline-block rounded-full border border-white/30 bg-white/15 px-3.5 py-1 text-xs font-bold tracking-wider text-white">
+                দ্রুত শুরু করুন
               </span>
               <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
-                Ready to Upgrade Your Hospital Operations?
+                আজই আপনার হসপিটালকে ডিজিটাল করুন
               </h2>
               <p className="mt-4 text-base leading-relaxed text-blue-100/95">
-                Experience Top HMS with a 14-day full-feature trial. No credit card required, and
-                our onboarding engineers handle your complete setup.
+                কোনো ক্রেডিট কার্ড ছাড়াই ১৪ দিনের পূর্ণাঙ্গ ফ্রি ট্রায়াল নিন। আমাদের অভিজ্ঞ
+                ইঞ্জিনিয়াররাই আপনার সম্পূর্ণ সেটআপ করে দেবেন।
               </p>
 
               <ul className="mt-7 space-y-3 text-sm font-medium text-white/95">
                 <li className="flex items-center gap-2.5">
                   <CheckCircle2 className="h-5 w-5 text-teal-300 shrink-0" />
-                  Dedicated onboarding &amp; hands-on staff training
+                  বিনামূল্যে অনবোর্ডিং ও সরাসরি স্টাফ ট্রেনিং
                 </li>
                 <li className="flex items-center gap-2.5">
                   <CheckCircle2 className="h-5 w-5 text-teal-300 shrink-0" />
-                  Zero-downtime legacy data migration
+                  কোনো ডাউনটাইম ছাড়াই পুরোনো ডেটা মাইগ্রেশন
                 </li>
                 <li className="flex items-center gap-2.5">
                   <CheckCircle2 className="h-5 w-5 text-teal-300 shrink-0" />
-                  Flexible monthly billing with no lock-in
+                  সহজ মাসিক বিলিং — কোনো দীর্ঘমেয়াদি বাধ্যবাধকতা নেই
                 </li>
               </ul>
 
@@ -71,7 +71,7 @@ export function ContactSection() {
                   <PhoneCall className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-xs font-medium text-slate-100">Prefer to talk directly?</p>
+                  <p className="text-xs font-medium text-slate-100">সরাসরি কথা বলতে চান?</p>
                   <a
                     href={SITE_INFO.phoneHref}
                     className="font-display text-base font-bold text-white hover:text-teal-200"
@@ -91,19 +91,19 @@ export function ContactSection() {
                       <ShieldCheck className="h-8 w-8" />
                     </div>
                     <h3 className="mt-4 font-display text-2xl font-bold text-slate-900">
-                      Trial Request Received!
+                      আপনার আবেদন গৃহীত হয়েছে!
                     </h3>
                     {referenceId && (
                       <p className="mt-1 text-xs font-bold uppercase tracking-wider text-[#192150]">
-                        Reference ID: {referenceId}
+                        রেফারেন্স আইডি: {referenceId}
                       </p>
                     )}
                     <p className="mx-auto mt-2 max-w-md text-sm text-slate-600">
-                      Thank you, <span className="font-semibold text-slate-900">{name}</span>. Our
-                      Top HMS onboarding specialist will call{" "}
-                      <span className="font-semibold text-slate-900">{phone}</span> shortly to
-                      activate your 14-day workspace for{" "}
-                      <span className="font-semibold text-slate-900">{hospital}</span>.
+                      ধন্যবাদ, <span className="font-semibold text-slate-900">{name}</span>। আমাদের
+                      Top HMS প্রতিনিধি শীঘ্রই{" "}
+                      <span className="font-semibold text-slate-900">{phone}</span> নম্বরে কল করে{" "}
+                      <span className="font-semibold text-slate-900">{hospital}</span>-এর ১৪ দিনের
+                      ফ্রি ট্রায়াল চালু করে দেবেন।
                     </p>
 
                     <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
@@ -114,7 +114,7 @@ export function ContactSection() {
                         className="inline-flex items-center gap-2 rounded-xl bg-[#0d9488] px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#0f766e]"
                       >
                         <MessageCircle className="h-4 w-4" />
-                        Fast-Track on WhatsApp
+                        WhatsApp-এ দ্রুত যোগাযোগ করুন
                       </a>
                       <button
                         type="button"
@@ -128,18 +128,17 @@ export function ContactSection() {
                         }}
                         className="rounded-xl border border-slate-300 px-5 py-2.5 text-sm font-semibold text-[#192150] hover:bg-slate-50 cursor-pointer"
                       >
-                        Submit Another Request
+                        নতুন আবেদন করুন
                       </button>
                     </div>
                   </div>
                 ) : (
                   <>
                     <h3 className="font-display text-2xl font-bold text-slate-900">
-                      Schedule Your Free Trial
+                      ফ্রি ট্রায়ালের জন্য আবেদন করুন
                     </h3>
                     <p className="mt-1 text-sm text-slate-600">
-                      Share your hospital details and our specialists will activate your workspace
-                      the same day.
+                      আপনার হসপিটালের তথ্য দিন — আমাদের টিম আজই আপনার ওয়ার্কস্পেস চালু করে দেবে।
                     </p>
 
                     {error && (
@@ -153,9 +152,9 @@ export function ContactSection() {
                         <div>
                           <label
                             htmlFor="trial-name"
-                            className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-700"
+                            className="mb-1.5 block text-xs font-semibold text-slate-700"
                           >
-                            Your Name *
+                            আপনার নাম *
                           </label>
                           <input
                             id="trial-name"
@@ -163,16 +162,16 @@ export function ContactSection() {
                             required
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            placeholder="Dr. Mahmudul Hasan"
+                            placeholder="ডা. মাহমুদুল হাসান"
                             className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 outline-none transition-all focus:border-[#203272] focus:ring-2 focus:ring-[#203272]/15"
                           />
                         </div>
                         <div>
                           <label
                             htmlFor="trial-hospital"
-                            className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-700"
+                            className="mb-1.5 block text-xs font-semibold text-slate-700"
                           >
-                            Hospital / Clinic Name *
+                            হসপিটাল / ক্লিনিকের নাম *
                           </label>
                           <input
                             id="trial-hospital"
@@ -180,7 +179,7 @@ export function ContactSection() {
                             required
                             value={hospital}
                             onChange={(e) => setHospital(e.target.value)}
-                            placeholder="City General Hospital"
+                            placeholder="সিটি জেনারেল হসপিটাল"
                             className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 outline-none transition-all focus:border-[#203272] focus:ring-2 focus:ring-[#203272]/15"
                           />
                         </div>
@@ -190,9 +189,9 @@ export function ContactSection() {
                         <div>
                           <label
                             htmlFor="trial-phone"
-                            className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-700"
+                            className="mb-1.5 block text-xs font-semibold text-slate-700"
                           >
-                            Mobile Number *
+                            মোবাইল নম্বর *
                           </label>
                           <input
                             id="trial-phone"
@@ -207,9 +206,9 @@ export function ContactSection() {
                         <div>
                           <label
                             htmlFor="trial-email"
-                            className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-700"
+                            className="mb-1.5 block text-xs font-semibold text-slate-700"
                           >
-                            Email Address (Optional)
+                            ইমেইল ঠিকানা (ঐচ্ছিক)
                           </label>
                           <input
                             id="trial-email"
@@ -228,12 +227,12 @@ export function ContactSection() {
                         className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#203272] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#203272]/25 transition-all hover:bg-[#192150] disabled:opacity-60 cursor-pointer"
                       >
                         <Send className="h-4 w-4" />
-                        {submitting ? "Activating Request..." : "Activate 14-Day Trial"}
+                        {submitting ? "আবেদন পাঠানো হচ্ছে..." : "১৪ দিনের ফ্রি ট্রায়াল চালু করুন"}
                       </button>
 
                       <p className="flex items-center justify-center gap-1.5 text-xs text-slate-600">
                         <Lock className="h-3.5 w-3.5 text-[#0d9488]" />
-                        Your information is safe. We never share your data.
+                        আপনার তথ্য সম্পূর্ণ নিরাপদ। আমরা কখনোই কারও সাথে ডেটা শেয়ার করি না।
                       </p>
                     </form>
                   </>

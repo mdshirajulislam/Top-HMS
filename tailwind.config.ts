@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-jakarta)", "ui-sans-serif", "system-ui", "sans-serif"],
-        display: ["var(--font-sora)", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["var(--font-bangla)", "var(--font-jakarta)", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["var(--font-bangla)", "var(--font-sora)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       spacing: {
         "4.5": "1.125rem",

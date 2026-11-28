@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Sora } from "next/font/google";
+import { Hind_Siliguri, Plus_Jakarta_Sans, Sora } from "next/font/google";
 import "./globals.css";
+
+const hindSiliguri = Hind_Siliguri({
+  subsets: ["bengali", "latin"],
+  variable: "--font-bangla",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -17,16 +24,16 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Top HMS — Modern Hospital Management & Clinical Operations Platform",
+  title: "Top HMS — আধুনিক হসপিটাল ম্যানেজমেন্ট ও হেলথকেয়ার ERP প্ল্যাটফর্ম",
   description:
-    "Unify outpatient queues, inpatient bed care, diagnostic labs, pharmacy POS, and audit-proof billing in one resilient healthcare platform.",
+    "OPD কিউ, IPD বেড ম্যানেজমেন্ট, ডায়াগনস্টিক ল্যাব, ফার্মেসি POS এবং অডিট-প্রুফ বিলিং — সম্পূর্ণ হসপিটাল পরিচালনার জন্য একটি সমন্বিত ও অফলাইন-সক্ষম প্ল্যাটফর্ম।",
   keywords: [
     "Top HMS",
-    "Hospital Management System",
-    "Clinical Operations Platform",
+    "হসপিটাল ম্যানেজমেন্ট সফটওয়্যার",
+    "Hospital Management System Bangladesh",
     "OPD IPD Software",
-    "Diagnostic Lab Software",
-    "Pharmacy POS",
+    "ডায়াগনস্টিক ল্যাব সফটওয়্যার",
+    "ফার্মেসি POS",
     "Healthcare ERP",
   ],
 };
@@ -37,8 +44,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${sora.variable}`}>
-      <body className="antialiased selection:bg-[#0d9488]/20 selection:text-[#0f3b7c]">
+    <html
+      lang="bn"
+      className={`${hindSiliguri.variable} ${jakarta.variable} ${sora.variable}`}
+    >
+      <body className="antialiased selection:bg-[#0d9488]/20 selection:text-[#203272]">
         {children}
       </body>
     </html>
